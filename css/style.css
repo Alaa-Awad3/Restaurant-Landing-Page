@@ -1,1 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
 
+h2, h2 span{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+h2, h4{
+    text-transform: uppercase;
+}
+
+h4{
+    padding-block: 10px;
+}
+
+h2{
+    color: #212529;
+    padding-bottom: 50px;
+}
+
+h2 span{
+    color: #CE1212;
+}
+
+.container{
+    width: 84%;
+    margin: auto;
+    display: flex;
+}
+
+#chefs, #gallery, #contact{
+    padding-block: 70px;
+    text-align: center;
+}
+
+#navbar{
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+    position: fixed;
+}
+
+#navbar .container{
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 25px;
+}
+
+#navbar ul li{
+    display: inline-block;
+    padding-inline: 15px;
+}
+
+#navbar h2, #navbar h2 span, #footer .mealify h2, #footer .mealify h2 span{
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: none;
+    padding: 0 0;
+}
+
+
+#navbar a{
+    color:#7F7F90;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#navbar i{
+    font-size: 25px;
+    color: #212529;
+}
+
+
+#home{
+    width: 100%;
+    height: 100vh;
+    background-color: #EEEEEE;
+}
+
+#home .container{
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#home .caption, #home .home-img{
+    width: 50%;
+}
+
+#home img{
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 3px 3px 20px 2px #363c42;
+}
+
+#home .home-img{
+    position: relative;
+    top:8%;
+    left:9%;
+}
+
+h1{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    color: #37373F;
+}
+
+#home .caption{
+    padding-top: 40px;
+    padding-right: 120px;
+}
+
+#home p{
+    color: #4F4F5A;
+    padding-block: 20px;
+    line-height: 27px;
+}
+
+.book-btn{
+    width: 145px;
+    height: 45px;
+    background-color: #CE1212;
+    color: white;
+    border: none;
+    border-radius: 0 40px 40px 40px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+#home a{
+    font-weight: 600;
+    color: #212529;
+    margin-left: 50px;
+    transition: color 0.3s;
+}
+
+#home i{
+    color: white;  
+    scale:2.5;
+}
+
+.play-icon{
+    background-color: #212529;
+    width: fit-content;
+    display: inline;
+    margin-right: 15px;
+    position: relative;
+    top:0;
+    left:0;
+    transition: background-color 0.3s;
+}
+
+.play-icon::before{
+    content: '';
+    width: 38px;
+    height: 38px;
+    border-left: #CE1212 7px solid;
+    border-top: #CE1212 7px solid;
+    border-bottom: #EEEEEE 7px solid;
+    border-right: #EEEEEE 7px solid;
+    border-radius: 50%;
+    position: absolute;
+    top:-15px;
+    left:-20px;
+    transform: rotate(-45deg);
+}
+
+#home a:hover{
+    color:#CE1212;
+}
+
+#home a:hover .play-icon{
+    background-color: #CE1212;
+}
+
+h4{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #7F7F90;
+    font-weight: 400;
+}
+
+
+#chefs h3{
+    font-family: "Inter", sans-serif;
+    color:#212529;
+    font-size: 18.72px;
+    font-weight: 700;
+}
+
+#chefs h5{
+    color: #7F7F90;
+    font-size: 14px;
+    font-weight: 400;
+    padding-block: 5px;
+}
+
+#chefs p{
+    color: #7F7F90;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#chefs .container{
+    justify-content: space-between;
+}
+
+.chef-cards{
+    width: 31.5%;
+    position: relative;
+    overflow: hidden;
+    transition: scale 0.5s;
+    box-shadow: 2px 2px 10px 1px #b3b2b265;
+}
+
+.chef-cards img{
+    width: 100%;
+}
+
+.chef-cards ul{
+    width: 13%;
+    position: absolute;
+    top:6%;
+    left:100%;
+    background-color: #F0E7DE;
+    text-align: center;
+    padding-block: 10px;
+    border-radius: 3px;
+    opacity: 0.6;
+    transition: left 0.3s 0.5s;
+}
+
+.chef-cards:hover{
+    scale: 1.08;
+}
+
+.chef-cards:hover ul{
+    left:83%;
+}
+
+#chefs i{
+    color: #857e7c;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+#chefs p{
+    padding-inline: 32px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+#gallery{
+    background-color: #EEEEEE;
+}
+
+
+#gallery .image-container{
+    columns: 3 250px;
+    gap: 20px;
+}
+
+#gallery .image-container .meal-cards{
+    position: relative;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: solid 4px white;
+}
+
+
+#gallery .image-container .meal-cards img{
+    width: 100%;
+    display: block;
+    transition: scale 0.5s;
+}
+
+#gallery .image-container .meal-cards .text-layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:100%;
+    left:0;
+    /* z-index:2; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: top 0.5s;
+}
+
+#gallery .text-layer h3{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 5px;
+}
+
+#gallery .text-layer p{
+    color: #DDDDDD;
+    padding-right: 15px;
+}
+
+#gallery .image-container .meal-cards:hover img{
+    scale: 1.1;
+}
+
+#gallery .image-container .meal-cards:hover .text-layer{
+    top:0;
+}
+
+#contact .container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact iframe{
+    width: 100%;
+    height:350px;
+    margin-bottom: 32px;
+}
+
+#contact .contact-info{
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#contact .contact-info .icon{
+    width: 10%;
+    height: 100%;
+    position: relative;
+    top:0;
+    left:0;
+    background-color: #CE1212;
+    text-align: center;
+    border-radius: 50%;
+    
+}
+
+#contact .contact-info .icon i{
+    scale:1.3;
+    position: absolute;
+    top:35%;
+    left:36%;
+    color: white;
+}
+
+
+#contact .contact-info .contact-text{
+    width:88%;
+}
+
+#contact .contact-form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+    box-shadow: 2px 2px 20px 5px #b3b2b265;
+    padding-block: 10px;
+}
+
+
+#name, #email{
+    width: 49.3%;
+}
+
+#subject, #message{
+    width: 100%;
+}
+
+#name, #email, #subject{
+    height:50px;
+}
+
+#name, #email, #subject, #message{
+    margin-block: 8px;
+    border: solid #E8E3E3 2px;
+    padding-inline: 10px;
+}
+
+#message{
+    height: 150px;
+    padding-top: 10px;
+}
+.contact-form .msg-btn{
+    width: 165px;
+    height: 45px;
+    background-color: #CE1212;
+    color: white;
+    border: none;
+    border-radius: 40px 40px 40px 40px;
+    font-size: 15px;
+    position: relative;
+    top:0;
+    left:50%;
+    transform: translateX(-82.5px);
+    margin-top: 32px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+#contact h3{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #7D7D7D;   
+    padding-bottom: 5px;
+}
+
+#contact p{
+    color: #212529;
+}
+
+#contact p span{
+    font-weight: 700;
+}
+
+.book-btn:hover, .msg-btn:hover, .subscribe-btn:hover{
+    background-color: #E61414;
+}
+
+#footer{
+    background-color: black;
+    color:white
+}
+
+#footer .container{
+    justify-content: space-between;
+    padding-block: 35px;
+}
+
+#footer .mealify{
+    width:25%; 
+    padding-top:15px;
+}
+
+#footer .subscribe{
+    width:48%;
+}
+
+#footer .get-in-touch{
+    width:23%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: fit-content;
+}
+
+#footer .mealify img{
+    width: 15%;
+}
+
+#footer .mealify h2{
+    display: inline;
+    color: white;
+    position: relative;
+    top:-10px;
+    left:5px;
+}
+
+#footer .mealify p{
+    padding-block: 5px;
+}
+
+#footer .mealify h3{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#footer .mealify ul{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .mealify ul i{
+    transform: scale(1.7);
+    color: white;
+}
+
+#footer h3{
+    font-family: "Inter", sans-serif;
+    font-size: 18.72px;
+}
+
+#footer hr{
+    border: #595959 1px solid;
+}
+
+#footer input{
+    width: 79%;
+    height: 15%;
+    padding-inline: 10px;
+}
+
+.subscribe-btn{
+    width: 20%;
+    height: 15%;
+    background-color: #CE1212;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+
+#footer .subscribe p{
+    margin-bottom: 15px;
+}
+
+#footer .subscribe h3{
+    width: 100%;
+    margin-block: 15px;
+}
+
+#footer .subscribe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#footer .subscribe ul{
+    width: 48.5%;
+}
+
+#footer .subscribe ul a{
+    color: white;
+}
+
+#footer .subscribe ul li{
+    padding-block: 6px;
+    padding-inline-start: 2px;
+    transition: all 0.5s;
+}
+
+#footer .subscribe ul li:hover{
+    background-color: #363c42;
+    transform: translateX(7px);
+}
+#footer .get-in-touch h3{
+    width: 100%;
+    margin-block: 15px;
+}
+#footer .get-in-touch i{
+    width: 10%;
+    scale: 1.4;
+    color: #CE1212;
+    margin-bottom: 15px;
+}
+
+#footer .get-in-touch p{
+    width: 90%;
+    margin-bottom: 15px;
+}
